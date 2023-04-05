@@ -161,7 +161,6 @@ a {
 }
 
 .hero__button-child:hover {
-  color: #007aff;
   transform: translateY(-5px);
 }
 
@@ -320,7 +319,7 @@ a {
 
 .app__image {
   width: 450px;
-  height: 400px;
+  height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
   margin-left: -50px;
@@ -425,6 +424,10 @@ a {
   display: flex;
 }
 
+.component__img {
+  margin-top: 3px;
+}
+
 .component__heading {
   padding-left: 8px;
   padding-bottom: 16px;
@@ -466,6 +469,8 @@ a {
 }
 
 .component__image {
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-right: -90px;
 }
 
@@ -598,6 +603,7 @@ a {
   border-radius: 6px;
   border: 1px solid #007aff;
   transition: 0.3s all ease;
+  cursor: pointer;
 }
 
 .price__div__button:hover {
@@ -756,6 +762,7 @@ a {
   background: #ffffff;
   border: none;
   border-radius: 4px;
+  outline: none;
 }
 
 .form__input::-moz-placeholder {
