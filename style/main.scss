@@ -7,6 +7,7 @@
 body {
   font-family: "Rubik";
   font-style: normal;
+  overflow-x: hidden;
 }
 
 .container {
@@ -172,7 +173,8 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   margin: 0 auto;
   letter-spacing: -0.01em;
   color: #0e1133;
@@ -182,7 +184,13 @@ body {
   margin: 0 auto;
   margin-top: 40px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.logos > img {
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 .desc {
@@ -202,7 +210,8 @@ body {
 }
 
 .desc__paragraph {
-  width: 700px;
+  max-width: 700px;
+  width: 100%;
   margin: 0 auto;
   font-weight: 400;
   font-size: 16px;
@@ -214,10 +223,13 @@ body {
 
 .funtionality {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .functionality__child {
-  width: 33%;
+  max-width: 33%;
+  width: 100%;
   margin-top: 80px;
   padding: 24px;
   background: #ffffff;
@@ -331,6 +343,8 @@ body {
   display: flex;
 }
 .expense__heading {
+  max-width: 700px;
+  width: 100%;
   font-weight: 700;
   font-size: 48px;
   line-height: 120%;
@@ -339,6 +353,8 @@ body {
 }
 
 .expense__paragraph {
+  max-width: 700px;
+  width: 100%;
   font-weight: 400;
   font-size: 16px;
   line-height: 155%;
@@ -360,7 +376,8 @@ body {
 
 .component__img {
   position: absolute;
-  left: -40px;
+  left: -80px;
+  overflow-x: hidden;
 }
 
 .component__heading {
@@ -412,7 +429,8 @@ body {
 }
 
 .plan__heading {
-  width: 620px;
+  max-width: 620px;
+  width: 100%;
   margin: 0 auto;
   font-weight: 700;
   font-size: 48px;
@@ -425,7 +443,8 @@ body {
 }
 
 .plan__paragraph {
-  width: 700px;
+  max-width: 700px;
+  width: 100%;
   padding-top: 24px;
   margin: 0 auto;
   font-weight: 400;
@@ -439,12 +458,16 @@ body {
 .price {
   margin-top: 70px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .price__div {
   position: relative;
   margin-left: 32px;
-  width: 400px;
+  margin-top: 32px;
+  max-width: 400px;
+  width: 100%;
   padding-left: 32px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1),
@@ -491,7 +514,7 @@ body {
 .line {
   margin-bottom: 32px;
   display: block;
-  width: 339px;
+  width: 90%;
   border: 0.8px solid #9fcdff;
 }
 
@@ -566,20 +589,18 @@ body {
   margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .customer__info {
   padding: 30px;
   margin-top: 31px;
   max-width: 600px;
+  width: 100%;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1),
     0px 1px 2px rgba(16, 24, 40, 0.06);
   border-radius: 4px;
-}
-
-.customer__info:nth-child(even) {
-  margin-left: 30px;
 }
 
 .customer__info__image {
@@ -600,6 +621,8 @@ body {
 .person {
   position: relative;
   margin-left: 80px;
+  display: flex;
+  flex-direction: column;
 }
 
 .person__name {
@@ -826,4 +849,255 @@ body {
 
 .footer__last > p:hover {
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 1240px) {
+  .customer-div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .customer__info {
+    max-width: 70%;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .components {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .component__button {
+    display: block;
+    width: 30%;
+  }
+
+  .component__img {
+    position: absolute;
+    left: -40px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero__info {
+    max-width: 80%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .app .container,
+  .expense .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .app__info {
+    margin-top: 30px;
+    max-width: 80%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .component__image {
+    order: -1;
+  }
+
+  .expense__heading {
+    font-size: 36px;
+  }
+
+  .expense__heading,
+  .expense__paragraph {
+    padding-top: 40px;
+    max-width: 80%;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .components {
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .component {
+    max-width: 35%;
+  }
+
+  .component__button {
+    display: block;
+    width: 30%;
+  }
+
+  .price__div {
+    margin-top: 32px;
+  }
+
+  .price__div:first-child {
+    margin-left: 32px;
+  }
+
+  .footer {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+} /*# sourceMappingURL=main.css.map */
+
+@media only screen and (max-width: 900px) {
+  .functionality__child__heading {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+  }
+
+  .functionality__child__paragraph {
+    font-weight: 300;
+    font-size: 14px;
+  }
+  .functionality {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .Links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero__info__heading {
+    font-size: 40px;
+  }
+
+  .hero__info__paragraph {
+    font-size: 16px;
+    line-height: 155%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    color: #505056;
+  }
+
+  .hero__button-link {
+    margin-left: -50px;
+  }
+
+  .app__heading {
+    font-size: 36px;
+  }
+
+  .download__heading {
+    font-size: 42px;
+  }
+
+  .form__button {
+    padding: 15px;
+  }
+
+  .app__image {
+    width: 340px;
+    height: 400px;
+  }
+
+  .component__image {
+    width: 340px;
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .desc__heading {
+    font-weight: 500;
+    font-size: 36px;
+  }
+  .functionality__child__heading {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  .functionality__child__paragraph {
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+  .functionality__child__image {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .nav__button {
+    margin-right: 20px;
+  }
+
+  .hero__image {
+    max-width: 400px;
+  }
+
+  .hero__button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: -80px;
+    padding-bottom: 30px;
+  }
+
+  .hero__button > a {
+    margin: 0 !important;
+  }
+
+  .hero__button-2 {
+    margin-top: 20px;
+  }
+
+  .app__heading {
+    font-size: 24px;
+  }
+
+  .secure__heading {
+    font-size: 16px;
+  }
+
+  .expense__heading {
+    font-size: 28px;
+  }
+
+  .component__heading {
+    font-size: 16px;
+  }
+  .logos {
+    justify-content: center;
+  }
+
+  .component__image {
+    width: 250px;
+    height: 300px;
+  }
 }
