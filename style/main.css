@@ -10,8 +10,18 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: 1280px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.container-header {
+  max-width: 100%;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -58,7 +68,7 @@ body {
 }
 
 .nav__link:hover {
-  text-decoration: underline;
+  color: #007aff;
 }
 
 .nav__button {
@@ -86,6 +96,13 @@ body {
 
 .hero {
   display: flex;
+  justify-content: center;
+  margin-left: 40px;
+}
+
+.hero__image {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .hero__info {
@@ -94,6 +111,8 @@ body {
 }
 
 .hero__info__heading {
+  max-width: 650px;
+  width: 100%;
   font-weight: 700;
   font-size: 56px;
   line-height: 120%;
@@ -104,6 +123,8 @@ body {
 }
 
 .hero__info__paragraph {
+  max-width: 700px;
+  width: 100%;
   padding-top: 24px;
   padding-right: 30px;
   font-weight: 400;
@@ -119,6 +140,10 @@ body {
   margin-top: 40px;
 }
 
+.hero__button-link {
+  text-decoration: none;
+}
+
 .hero__button-child {
   position: relative;
   padding: 10px 11px;
@@ -131,12 +156,13 @@ body {
   border-radius: 7.05575px;
   text-transform: uppercase;
   text-align: left;
-  transition: 0.3s all ease;
   cursor: pointer;
+  transition: 0.3s all ease;
 }
 
 .hero__button-child:hover {
-  opacity: 0.85;
+  color: #007aff;
+  transform: translateY(-5px);
 }
 
 .hero__button-child > span {
@@ -154,8 +180,11 @@ body {
 
 .hero__button-child:last-child {
   text-transform: initial;
-  margin-left: 30px;
   padding-left: 50px;
+}
+
+.hero__button-2 {
+  margin-left: 30px;
 }
 
 .trust {
@@ -182,6 +211,15 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.logos-link {
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+
+.logos-link:hover {
+  transform: translateY(-5px);
 }
 
 .logos > img {
@@ -219,12 +257,11 @@ body {
 
 .funtionality {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
 .functionality__child {
-  max-width: 33%;
+  max-width: 400px;
   width: 100%;
   margin-top: 80px;
   padding: 24px;
@@ -277,11 +314,21 @@ body {
   padding-bottom: 100px;
 }
 
+.app__info {
+  margin-left: 50px;
+}
+
 .app__image {
-  margin-left: -90px;
+  width: 450px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: -50px;
 }
 
 .app__heading {
+  max-width: 750px;
+  width: 100%;
   padding-bottom: 24px;
   font-weight: 700;
   font-size: 48px;
@@ -291,6 +338,8 @@ body {
 }
 
 .app__paragraph {
+  max-width: 700px;
+  width: 100%;
   padding-bottom: 48px;
   font-weight: 400;
   font-size: 16px;
@@ -300,15 +349,14 @@ body {
 }
 
 .social {
+  margin-left: 50px;
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .secure {
   position: relative;
-}
-
-.secure:last-child {
-  margin-left: 50px;
 }
 
 .secure__image {
@@ -325,6 +373,8 @@ body {
 }
 
 .secure__paragraph {
+  max-width: 300px;
+  width: 100%;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -371,13 +421,12 @@ body {
   margin-left: 40px;
 }
 
-.component__img {
-  position: absolute;
-  left: -80px;
-  overflow-x: hidden;
+.component-div {
+  display: flex;
 }
 
 .component__heading {
+  padding-left: 8px;
   padding-bottom: 16px;
   font-weight: 700;
   font-size: 20px;
@@ -455,7 +504,6 @@ body {
 .price {
   margin-top: 70px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -756,7 +804,7 @@ body {
   color: #ffffff;
 }
 
-.download__span > span:hover {
+.download__span > span {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -792,7 +840,8 @@ body {
 }
 
 .company__link:hover {
-  text-decoration: underline;
+  color: #007aff;
+  transform: translateY(-3px);
 }
 
 .Links > div {
@@ -826,10 +875,15 @@ body {
   padding-bottom: 40px;
 }
 
-.social > img {
-  width: 30px;
-  height: 30px;
-  padding: 10px;
+.sociial {
+  display: flex;
+}
+
+.sociial > div {
+  width: 25px;
+  height: 25px;
+  padding-top: 5px;
+  padding-left: 6px;
   margin-left: 14px;
   background: #1e293b;
   border-radius: 30px;
@@ -837,7 +891,11 @@ body {
   cursor: pointer;
 }
 
-.social > img:hover {
+.sociial > div > img {
+  justify-content: center;
+}
+
+.sociial > div:hover {
   background: #2563eb;
 }
 
@@ -850,7 +908,7 @@ body {
 }
 
 .footer__last > p:hover {
-  text-decoration: underline;
+  color: #007aff;
 }
 
 @media only screen and (max-width: 1240px) {
@@ -867,16 +925,44 @@ body {
 }
 @media only screen and (max-width: 1120px) {
   .components {
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
   }
   .component__button {
     display: block;
     width: 30%;
   }
-  .component__img {
-    position: absolute;
-    left: -40px;
+  .component {
+    max-width: 400px;
+    width: 100%;
+  }
+  .app__heading {
+    font-size: 36px;
+  }
+  .app__image {
+    height: 400px;
+    width: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .social {
+    max-width: 600px;
+    width: 100%;
+  }
+  .secure {
+    margin-top: 30px;
+  }
+  .price {
+    flex-wrap: wrap;
+  }
+  .price__div {
+    max-width: 400px;
+    width: 100%;
+  }
+  .plan {
+    padding-top: 40px;
+  }
+  .plan__heading {
+    font-size: 36px;
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -891,9 +977,13 @@ body {
     align-items: center;
   }
   .hero__info {
+    padding-top: 40px;
     max-width: 80%;
     width: 100%;
     text-align: center;
+  }
+  .hero__info__heading {
+    font-size: 42px;
   }
   .app .container,
   .expense .container {
@@ -906,11 +996,22 @@ body {
     width: 100%;
     text-align: center;
   }
+  .secure {
+    max-width: 240px;
+    width: 100%;
+    text-align: left;
+  }
+  .secure:last-child {
+    margin-left: 30px;
+  }
   .component__image {
     order: -1;
   }
   .expense__heading {
     font-size: 36px;
+  }
+  .funtionality {
+    flex-wrap: wrap;
   }
   .expense__heading,
   .expense__paragraph {
@@ -922,17 +1023,11 @@ body {
     margin: 0 auto;
   }
   .components {
-    align-items: center;
     justify-content: center;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  .component {
-    max-width: 35%;
   }
   .component__button {
     display: block;
-    width: 30%;
+    width: 500px;
   }
   .price__div {
     margin-top: 32px;
@@ -946,6 +1041,10 @@ body {
   }
 } 
 @media only screen and (max-width: 900px) {
+  .price__div {
+    max-width: 550px;
+    width: 100%;
+  }
   .functionality__child__heading {
     font-weight: 400;
     font-size: 18px;
@@ -959,6 +1058,14 @@ body {
     display: flex;
     flex-wrap: wrap;
   }
+  .functionality__child {
+    max-width: 600px;
+    width: 100%;
+    margin-left: 0px;
+  }
+  .desc {
+    margin-top: 50px;
+  }
 }
 @media only screen and (max-width: 800px) {
   .Links {
@@ -967,12 +1074,20 @@ body {
     text-align: center;
     align-items: center;
   }
+  .functionality__child {
+    max-width: 600px;
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 768px) {
+  .hero__info {
+    padding: 0;
+  }
   .hero__info__heading {
-    font-size: 40px;
+    font-size: 32px;
   }
   .hero__info__paragraph {
+    padding-right: 0px;
     font-size: 16px;
     line-height: 155%;
     display: flex;
@@ -981,7 +1096,7 @@ body {
     color: #505056;
   }
   .hero__button-link {
-    margin-left: -50px;
+    margin-left: -20px;
   }
   .app__heading {
     font-size: 36px;
@@ -1002,6 +1117,38 @@ body {
   }
 }
 @media only screen and (max-width: 700px) {
+  .social {
+    justify-content: center;
+    margin-left: 0px;
+  }
+  .secure {
+    margin-left: 0;
+  }
+  .customer__heading {
+    font-size: 30px;
+  }
+  .download {
+    padding: 50px 0px;
+  }
+  .download__heading {
+    font-size: 32px;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .form__input {
+    max-width: 600px;
+    width: 100%;
+    justify-content: center;
+  }
+  .form__button {
+    margin-left: 0px;
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+  }
   .desc__heading {
     font-weight: 500;
     font-size: 36px;
@@ -1025,27 +1172,29 @@ body {
     margin-right: 20px;
   }
   .hero__image {
-    max-width: 400px;
+    max-width: 300px;
+    height: 400px;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
-  .hero__button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: -80px;
-    padding-bottom: 30px;
+  .hero__info__heading {
+    font-size: 24px;
   }
   .hero__button > a {
     margin: 0 !important;
   }
   .hero__button-2 {
     margin-top: 20px;
+    margin-left: 0px;
   }
   .app__heading {
     font-size: 24px;
   }
   .secure__heading {
     font-size: 16px;
+  }
+  .plan__heading {
+    font-size: 24px;
   }
   .expense__heading {
     font-size: 28px;
@@ -1054,7 +1203,17 @@ body {
     font-size: 16px;
   }
   .logos {
+    width: 200px;
     justify-content: center;
+    flex-direction: column;
+    align-items: left;
+  }
+  .logos-link {
+    margin-top: 30px;
+  }
+  .customer__info {
+    max-width: 500px;
+    width: 100%;
   }
   .component__image {
     width: 250px;
